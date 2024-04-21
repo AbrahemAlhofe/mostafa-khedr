@@ -16,8 +16,8 @@ export default {
         "transparent": "hsl(0 0% 0% / 0)"
       },
       fontFamily: {
-        "laxr": ['Laxr'],
-        "cairo": ['Cairo']
+        "laxr": ['Laxr', 'system-ui'],
+        "cairo": ['Cairo', 'system-ui']
       },
       spacing: {
         '0.4': '0.08rem',
