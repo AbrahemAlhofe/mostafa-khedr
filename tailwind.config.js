@@ -9,6 +9,7 @@ export default {
       colors: {
         "black-00": "hsl(0 0 0)",
         "black-40": "hsl(0 0% 40%)",
+        "black-65": "hsl(0deg 0% 65%)",
         "green-5": "hsl(160 100 5)",
         "green-40": "hsl(160 100% 40%)",
         "turquoise-75": "hsl(175 100% 75%)",
