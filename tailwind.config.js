@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./creative-file.html",
+    "./src/**/*.{js,ts,jsx,tsx,hbs}",
   ],
   theme: {
     extend: {
