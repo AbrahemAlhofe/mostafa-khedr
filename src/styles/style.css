@@ -319,8 +319,8 @@ section.chapter#intro {
                     
                     img {
                         @apply pointer-events-none;
-                        transform: scale(5.5);
-                        margin-right: -5em;
+                        transform: scale(3);
+                        margin-right: 5em;
                     }
             
                 }

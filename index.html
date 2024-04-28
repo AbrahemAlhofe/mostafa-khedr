@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>مصطفى خضر | Mostafa Khedr</title>
-    <style>img{visibility:collapse;}</style>
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    {{> header }}
   </head>
   <body class="bg-black-00 dir-rtl relative | lg:flex">
     
@@ -74,7 +70,7 @@
       <section class="chapter flex-center" id="intro">
         <div class="intro__banner relative | text-[2vw] lg:text-[1vw]">
           <div style="text-align: center; margin: 2em 0 2em 0" class="layer">
-            <h1 class="intro__title">ماذا يعني إجتماع</h1>
+            <h1 class="intro__title mb-4">ماذا يعني إجتماع</h1>
             <h1 class="intro__title">ناجح بالنسبة لي ؟</h1>
           </div>
           <div style="display: none" class="layer !block">
@@ -140,38 +136,7 @@
           <p>الإنجاز اليوم لم يعد يكمن في تحقيق النجاحات فحسب، بل هو يكمن في استمراريتك في تحقيق هذه النجاحات، والتي تتحق من معرفتك لكيفية التسويق لها والتحدث عنها تحدثًا يمكنك من تحقيق المزيد منها, و معاً، نتخذ خطوات جادة تجاه ذلك</p>
         </div>
       </section>
-      <footer id="contact" class="h-[100vh]">
-        <div data-svg="/assets/vectors/Contact Me.svg" class="w-[10em] | lg:hidden"></div>
-        <article class="contact__info">
-          <h1>كلمني</h1>
-          <div>
-            <ul class="contact__card | lg:!text-[1.5vw] text-black-65">
-              <li>
-                <span>رقم التليفون :</span>
-                <a href="tel:+201000819531" dir="ltr" class="underline">+20 1000 8195 31</a>
-              </li>
-              <li>
-                <span>الإيميل :</span>
-                <a href="mailto:mostafa.povostudios@gmail.com" class="underline">mostafa.povostudios@gmail.com</a>
-              </li>
-            </ul>
-            <ul class="contact__card">
-              <li data-svg="/assets/vectors/Facebook.svg">
-                <a href="https://facebook.com/mostafa.khedr">فيسبوك</a>
-              </li>
-              <ul>
-                <li data-svg="/assets/vectors/X.svg">
-                  <a href="https://twitter.com/mostafa.khedr">إكس</a>
-                </li>
-                <li data-svg="/assets/vectors/Instagram.svg">
-                  <a href="https://instagram.com/mostafa.khedr">إنتسجرام</a>
-                </li>
-              </ul>
-            </ul>
-          </div>
-        </article>
-        <img src="/images/Footer.png" style="display: none;" loading="lazy" class="!block | lg:!hidden"/>
-      </footer>
+      {{> footer }}
     </main>
     <img src="/images/Footer - 2.png" style="display: none;" loading="lazy" class="!block absolute w-full bottom-0 z-[-1] object-[0_10em]"/>
     <script>document.querySelectorAll('img').forEach(img => img.addEventListener("load", () => (img.style.visibility = "visible") ));</script>

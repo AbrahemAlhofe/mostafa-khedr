@@ -17,14 +17,19 @@
       
         {{> navbar }}
   
-        <div class="hidden lg:flex flex-col | flex-1">
-  
-        </div>
-  
     </aside>
     <main class="lg:w-[60vw]">
 
-      <h1 class="h-[100vh] flex justify-center items-center text-5xl">الملف الإبداعي</h1>
+      <div class="h-[100vh] flex justify-center items-center overflow-hidden">
+        <ul class="z-stack">
+          <li class="text-[2.5em]">
+            <h1>الملف الإبداعي</h1>
+          </li>
+          <li>
+            <img src="/images/Line - 1.png"  loading="lazy" class="scale-[3.5]"/>
+          </li>
+        </ul>
+      </div>
       
       <article class="flex flex-col gap-5 p-5">
 
@@ -36,7 +41,7 @@
 
         <div>
 
-          <h2 class="text-2xl">الخبرات السابقة</h2>
+          <h2 class="text-2xl underline decoration-green-40">الخبرات السابقة</h2>
 
           <ul class="list-disc list-inside">
             <li>مدرب فنون صناعة المحتوى لأكثر من 6000 طالب بالجامعات الحكومية والخاصة</li>
@@ -51,11 +56,11 @@
 
         <div class="flex flex-col gap-4">
 
-          <h2 class="text-2xl">نماذج أدبية</h2>
+          <h2 class="text-2xl underline decoration-green-40">نماذج أدبية</h2>
 
           <div class="flex gap-4 text-justify">
 
-            <div style="background-image: url('/images/literary-works/alhadra.jpg')" class="bg-center bg-cover"></div>
+            <div style="background-image: url('/images/literary-works/alhadra.jpg')" class="rounded-md bg-center bg-cover"></div>
   
             <p class="w-[60vw] lg:w-[40vw]">
               الحضرة بقلم مصطفى خضر ... أشياء كثيرة في الحياة قررت ألا أجربها خوفًا من الإدمان، ولكني أدمنت البحث عن الماضي، أرى نفسي فيه، أراني في لوحة عمرها عشرات السنوات، في جرامافون في شارع هدى شعراوي، في لمبة جاز في الجمالية، أرى نفسي في كل ما هو قديم، في كل عتيق، في كل قطعة لا مثيل لها، أجد روحي في موسيقى أحمد التوني، أنفاس ياسين التهامي، أجد شغفي على الهواء عندما ألعب موسيقى صوفية تسحب روحك إلى السماء، وتعود بخيرها إلى الأرض لتمطر فضة على قلوب المحبين الزاهدين.
@@ -65,7 +70,7 @@
 
           <div class="flex gap-4 text-justify">
 
-            <div style="background-image: url('/images/literary-works/eish-alkhufaash.jpg')" class="bg-center bg-cover"></div>
+            <div style="background-image: url('/images/literary-works/eish-alkhufaash.jpg')" class="rounded-md bg-center bg-cover"></div>
   
             <p class="w-[60vw] lg:w-[40vw]">
               عش الخفاش بقلم مصطفى خضر ... في أجواء نفسية رهيبة تلقي بظلالها على الشخصيات والأحداث، تنقل لنا طبيعة الحياة
@@ -76,7 +81,7 @@
 
           <div class="flex gap-4 text-justify">
 
-            <div style="background-image: url('/images/literary-works/muskan.jpg')" class="bg-center bg-cover"></div>
+            <div style="background-image: url('/images/literary-works/muskan.jpg')" class="rounded-md bg-center bg-cover"></div>
   
             <p class="w-[60vw] lg:w-[40vw]">
               يتحدث الكتاب عن كيفية التعامل مع المشكلات الحياتية، التي تواجه الكثيرين في الممارسات اليومية، والتي تتطلب في بعض الأحيان إيجاد حلول مؤقتة، تشبه "المسكن"، وضرورة التوقف عن تناول هذا "المسكن" وإيجاد حلول جذرية لتلك المشكلات. ويحمل الكتاب بعدا نفسيا، حيث يتضمن عددا من التجارب الحياتية البسيطة، التي يشرح من خلالها المؤلف فكرة " المسكن" وكيفية الابتعاد عنه وأعراض الانسحاب حال التوقف عن تناوله.
@@ -88,7 +93,15 @@
 
         <div>
 
-          <h2 class="text-2xl text-center mb-3"> - شركاء النجاح - </h2>
+          <h2 class="text-2xl text-center mb-3">
+
+            <span class="text-green-40"> - </span>
+            
+            <span>شركة النجاح</span>
+
+            <span class="text-green-40"> - </span>
+
+          </h2>
           
           <img src="/images/Success Partners.png" class="visible w-full rounded-lg m-auto"/>
 
@@ -96,7 +109,10 @@
 
       </article>
 
+      {{>footer}}
     </main>
+    <img src="/images/Footer - 2.png" style="display: none;" loading="lazy" class="!block absolute w-full bottom-0 z-[-1] object-[0_10em]"/>
+    <script type="module" src="./src/main.js"></script>
+    <script>document.querySelectorAll('img').forEach(img => img.addEventListener("load", () => (img.style.visibility = "visible") ));</script>
   </body>
-  <script type="module" src="./src/main.js"></script>
 </html>
