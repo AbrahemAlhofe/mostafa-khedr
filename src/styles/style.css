@@ -128,11 +128,11 @@ nav {
 
 section#hero {
 
-    padding-top: 10vh;
+    padding-top: min(10vw, 15vh);
     gap: 3.5em;
     
     #hero__banner {
-        font-size: min(4.85vw, 20px);
+        font-size: clamp(1rem, 5vw, 3.5vh);
         margin-right: -3em;
     }
 
@@ -187,8 +187,9 @@ section#hero {
 
     .paragraph {
 
-        --font-size-max: 1.15em;
+        --font-size-max: 1em;
         --font-size-min: 5px;
+        width: clamp(25em, 60vw, 32em);
 
     }
 
