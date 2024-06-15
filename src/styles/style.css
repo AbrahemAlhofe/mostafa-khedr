@@ -126,6 +126,44 @@ nav {
     width: 100%;
 }
 
+@keyframes appear {
+
+    from {
+        opacity: 0.3;
+        transform: translateY(20px);
+    }
+
+}
+
+@keyframes dropshadow {
+
+    from {
+        filter: drop-shadow(0px 0px 10px #00FFB3);
+    }
+
+}
+
+@keyframes paralax-image {
+
+    to {
+
+        transform: translateX(-4em) translateY(-3em);
+
+    }
+
+}
+
+@keyframes paralax-title {
+
+    to {
+
+        transform: translateY(1em);
+        opacity: 0;
+
+    }
+
+}
+
 section#hero {
 
     padding-top: min(10vw, 15vh);
@@ -140,10 +178,81 @@ section#hero {
 
         width: 10em;
         height: 12.5em;
-        
-        img {
-            transform: scale(5.5);
-            margin-right: 3.5em;
+        position: relative;
+
+        & > div:nth-child(1) {
+            position: absolute;
+            left: -0.6em;
+            bottom: -0.1em;
+            font-size: 8em;
+            [data-svg] {
+                position: relative;
+                width: 1em;
+                height: 1em;
+                svg {
+                    position: absolute;
+                    left: 0.05em;
+                    top: -0.1em;
+                    width: 1em;
+                }
+            }
+            animation: appear 1.5s ease-out, dropshadow 1s ease-in;
+        }
+
+        & > div:nth-child(2) {
+            position: absolute;
+            right: -2.5em;
+            bottom: -2em;
+            [data-svg] {
+                position: relative;
+                width: 6em;
+                height: 6em;
+                svg {
+                    position: absolute;
+                    left: -3.5em;
+                    top: -3.5em;
+                }
+            }
+            animation: appear 1.5s ease-out, dropshadow 1s ease-in;
+        }
+
+        & > div:nth-child(3) {
+            position: absolute;
+            top: 0em;
+            left: 7em;
+            [data-svg] {
+                position: relative;
+                width: 2.5em;
+                height: 2.5em;
+                svg {
+                    position: absolute;
+                    left: -3em;
+                    top: -3.2em;
+                }
+            }
+            animation: appear 1.5s ease-out, dropshadow 1s ease-in;
+        }
+
+        .plane {
+
+            opacity: 0.85;
+            width: 10em;
+            height: 13em;
+            background: rgba(221, 221, 221, 0.55);
+            position: absolute;
+            border-radius: 0.2em;
+            backdrop-filter: blur(10px);
+            margin-top: -1em;
+
+            img {
+                height: 100%;
+                padding: 0.2em;
+                opacity: 0.6;
+            }
+
+            animation: appear 2s ease-out;
+            animation-delay: 0.1s;
+
         }
 
     }
@@ -175,6 +284,8 @@ section#hero {
     #hero__image {
         width: 10em !important;
         transform: translateX(-4em);
+        animation: paralax-image 3s ease-in forwards;
+        animation-timeline: view(100px);
     }
 
     #hero__title {
@@ -183,6 +294,8 @@ section#hero {
         opacity: 0.99;
         z-index: 5;
         width: min-content;
+        animation: paralax-title 10s ease-in forwards;
+        animation-timeline: view(200px);
     }
 
     .paragraph {
