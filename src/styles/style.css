@@ -135,12 +135,22 @@ nav {
 
 }
 
-@keyframes dropshadow {
+@keyframes shinning {
 
     from {
         filter: drop-shadow(0px 0px 10px #00FFB3);
     }
 
+}
+
+@keyframes breathing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+        filter: drop-shadow(0px 0px 5px #00FFB3);
+    }
 }
 
 @keyframes paralax-image {
@@ -166,7 +176,7 @@ nav {
 
 section#hero {
 
-    padding-top: min(10vw, 15vh);
+    padding-top: min(20vw, 15vh);
     gap: 3.5em;
     
     #hero__banner {
@@ -176,13 +186,14 @@ section#hero {
 
     #hero__background {
 
-        width: 10em;
+        width: 11.5em;
         height: 12.5em;
         position: relative;
+        margin-left: -1.5em;
 
         & > div:nth-child(1) {
             position: absolute;
-            left: -0.6em;
+            left: -0.45em;
             bottom: -0.1em;
             font-size: 8em;
             [data-svg] {
@@ -196,13 +207,13 @@ section#hero {
                     width: 1em;
                 }
             }
-            animation: appear 1.5s ease-out, dropshadow 1s ease-in;
+            animation: appear 1.5s ease-out, shinning 1s ease-in, breathing 5s ease-in-out infinite 1.5s;
         }
 
         & > div:nth-child(2) {
             position: absolute;
-            right: -2.5em;
-            bottom: -2em;
+            right: -2.75em;
+            bottom: -2.2em;
             [data-svg] {
                 position: relative;
                 width: 6em;
@@ -213,7 +224,7 @@ section#hero {
                     top: -3.5em;
                 }
             }
-            animation: appear 1.5s ease-out, dropshadow 1s ease-in;
+            animation: appear 1.5s ease-out, shinning 1s ease-in, breathing 5s ease-in-out infinite 2s;
         }
 
         & > div:nth-child(3) {
@@ -230,7 +241,7 @@ section#hero {
                     top: -3.2em;
                 }
             }
-            animation: appear 1.5s ease-out, dropshadow 1s ease-in;
+            animation: appear 1.5s ease-out, shinning 1s ease-in, breathing 5s ease-in-out infinite 2.45s;
         }
 
         .plane {
