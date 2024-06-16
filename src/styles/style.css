@@ -46,7 +46,7 @@
         display: flex;
         gap: 1.5em;
         padding-inline: 1.5em;
-        font-size: clamp(var(--font-size-min, 3.25vmin), 4vw, var(--font-size-max, 3vmin));
+        font-size: clamp(var(--font-size-min, 0.8em), 3.5vmin, var(--font-size-max, 4vmin));
 
         &:before {
 
@@ -61,7 +61,7 @@
 
         p {
 
-            @apply font-bold text-justify;
+            @apply font-light text-justify;
             line-height: 2em; 
             font-size: 0.9em;      
 
