@@ -6,8 +6,8 @@ export default {
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, './src/pages/index.html'),
-        ['creative-file']: resolve(__dirname, './src/pages/creative-file.html'),
+        main: resolve(__dirname, './index.html'),
+        ['creative-file']: resolve(__dirname, './creative-file.html'),
       },
     },
   },
