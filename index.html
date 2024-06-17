@@ -51,7 +51,7 @@
                 <div data-svg="/decorations/blob-3.svg"></div>
               </div>
               <div class="plane">
-                <img src="/decorations/Plan.png" loading="lazy">
+                <img src="/decorations/Plan.png" onload="visible(this)">
               </div>
             </div>
   
@@ -66,7 +66,7 @@
               
             <h1 id="hero__title" class="absolute w-fit text-white flex-center">مصطفى خضر</h1>
   
-            <img src="/data/Mostafa Khedr.png" id="hero__image" style="width: 100vw;" class="absolute" loading="lazy" />
+            <img src="/data/Mostafa Khedr.png" id="hero__image" style="width: 100vw;" class="absolute" loading="lazy" onload="visible(this)" />
   
           </li>
   
@@ -98,7 +98,7 @@
           </div>
           <div class="chapter__thumbnail">
             <h1>تحديد الفرص</h1>
-            <img src="/decorations/Story - Chapter 1.png" style="width: 100vw" loading="lazy">
+            <img src="/decorations/Story - Chapter 1.png" style="width: 100vw" loading="lazy" onload="visible(this)">
             <h2>و التهديدات</h2>
           </div>
         </div>
@@ -113,7 +113,7 @@
           </div>
           <div class="chapter__thumbnail">
             <h1>تحــــــديد</h1>
-            <img src="/decorations/Story - Chapter 2.png" style="width: 100vw" loading="lazy">
+            <img src="/decorations/Story - Chapter 2.png" style="width: 100vw" loading="lazy" onload="visible(this)">
             <h2>الأهداف</h2>
           </div>
         </div>
@@ -128,7 +128,7 @@
           </div>
           <div class="chapter__thumbnail">
             <h1>التنفيذ</h1>
-            <img src="/decorations/Story - Chapter 3.png" style="width: 100vw"  loading="lazy">
+            <img src="/decorations/Story - Chapter 3.png" style="width: 100vw"  loading="lazy" onload="visible(this)">
           </div>
         </div>
         <div class="paragraph | lg:!mt-4">
@@ -139,7 +139,7 @@
         <div class="chapter__banner | !text-[6vw] md:!text-[4vw] lg:!text-[2vw]">
           <div class="chapter__thumbnail">
             <h1>ماذا ستقول</h1>
-            <img src="/decorations/Story - Final.png" style="width: 100vw" loading="lazy">
+            <img src="/decorations/Story - Final.png" style="width: 100vw" loading="lazy" onload="visible(this)">
             <h2>عن نجاحك ؟</h2>
           </div>
         </div>
@@ -149,15 +149,7 @@
       </section>
       {{> footer }}
     </main>
-    <img src="/decorations/Footer - 2.png" style="display: none;" loading="lazy" class="!block absolute w-full bottom-0 z-[-1] object-[0_8vw]"/>
-    <script>
-      document.querySelectorAll('img').forEach(img => {
-        const makeItVisible = () => (img.style.visibility = "visible");
-        img.addEventListener("load", makeItVisible);
-        if ( img.complete ) makeItVisible()
-        setTimeout(makeItVisible, 1000)
-      });
-    </script>
+    <img src="/decorations/Footer - 2.png" style="display: none;" loading="lazy" class="!block absolute w-full bottom-0 z-[-1] object-[0_8vw]" onload="visible(this)"/>
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
