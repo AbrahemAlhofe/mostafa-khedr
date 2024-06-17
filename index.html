@@ -154,7 +154,8 @@
       document.querySelectorAll('img').forEach(img => {
         const makeItVisible = () => (img.style.visibility = "visible");
         img.addEventListener("load", makeItVisible);
-        if ( img.complete && img.naturalHeight !== 0 ) makeItVisible()
+        if ( img.complete ) makeItVisible()
+        setTimeout(makeItVisible, 1000)
       });
     </script>
     <script type="module" src="./src/js/main.js"></script>
