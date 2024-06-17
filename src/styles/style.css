@@ -296,7 +296,7 @@ section#hero {
     
     #hero__image {
         width: 10em !important;
-        transform: translateX(-4em);
+        transform: translateX(-5em);
     }
 
     #hero__title {
