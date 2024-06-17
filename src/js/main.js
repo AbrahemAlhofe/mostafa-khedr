@@ -1,4 +1,4 @@
-import "./styles/style.css";
+import "../styles/style.css";
 import SVGInjectInstance from "@iconfu/svg-inject";
 
 Array.from(document.querySelectorAll('[data-svg]')).forEach($wrapper => {
