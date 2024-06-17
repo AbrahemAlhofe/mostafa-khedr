@@ -8,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "black-00": "hsl(0 0 0)",
-        "black-40": "hsl(0 0% 40%)",
+        "black-00": "hsl(0deg 0% 0%)",
+        "black-40": "hsl(0deg 0% 40%)",
         "black-65": "hsl(0deg 0% 65%)",
-        "green-5": "hsl(160 100 5)",
-        "green-40": "hsl(160 100% 40%)",
-        "turquoise-75": "hsl(175 100% 75%)",
-        "orange-50": "hsl(40 100 50)",
-        "transparent": "hsl(0 0% 0% / 0)"
+        "green-5": "hsl(160deg 100% 5%)",
+        "green-40": "hsl(160deg 100% 40%)",
+        "turquoise-75": "hsl(175deg 100% 75%)",
+        "orange-50": "hsl(40deg 100% 50%)",
+        "transparent": "transparent"
       },
       fontFamily: {
         "laxr": ['Laxr', 'system-ui'],
