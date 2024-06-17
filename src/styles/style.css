@@ -10,6 +10,8 @@
         
         @apply text-white font-cairo bg-black-00;
 
+        font-size: 16px;
+
     }
 
     h1, h2 {
