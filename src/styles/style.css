@@ -297,8 +297,6 @@ section#hero {
     #hero__image {
         width: 10em !important;
         transform: translateX(-4em);
-        animation: paralax-image 3s ease-in forwards;
-        animation-timeline: view(100px);
     }
 
     #hero__title {
@@ -307,8 +305,6 @@ section#hero {
         opacity: 0.99;
         z-index: 5;
         width: min-content;
-        animation: paralax-title 10s ease-in forwards;
-        animation-timeline: view(200px);
     }
 
     .paragraph {
@@ -319,6 +315,21 @@ section#hero {
 
     }
 
+}
+
+@supports (animation-timeline: view(100px)) {
+    section#hero {
+        #hero__image {
+            animation: paralax-image 3s ease-in forwards;
+            animation-timeline: view(100px);
+        }
+
+        #hero__title {
+            animation: paralax-title 10s ease-in forwards;
+            animation-timeline: view(200px);
+        }
+
+    }
 }
 
 section.chapter {
